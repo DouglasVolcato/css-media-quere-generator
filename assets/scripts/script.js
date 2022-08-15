@@ -1,18 +1,11 @@
-function generate(){
-  // alert("teste")
+function generate() {
+  const input = document.getElementById("cssInput").value;
+  if (input.includes("vw") && input.includes(":") && input.includes("}") && input.includes("{")) {
+    document.getElementById("generatedCss").innerText = cssResponsivity(input);
+  } else {
+    document.getElementById("generatedCss").innerText = "Invalid CSS";
+  }
 }
-
-// const inputCss = `
-//     header, footer{
-//     height: 7vw;
-//     border: solid 0.5vw rgb(73, 93, 204);
-//     }
-//     .repositoryList section{
-//       margin: 1vw;
-//       border: solid 0.14vw;
-//     }
-// `;
-// console.log(cssResponsivity(inputCss));
 
 //mainly function
 function cssResponsivity(css) {
@@ -25,12 +18,12 @@ function cssResponsivity(css) {
   //extract numbers and clean text
   //obj.numbers
   //obj.textArr
-  const obj = extractNumbers(arr, locations, inputCss);
+  const obj = extractNumbers(arr, locations, css);
 
   //configurations for @media
   //Width always in decrescent order
   const mediaQuereConfig = {
-    width: [1000, 900, 800, 700, 600, 500],
+    width: cssWidthSizes(),
     multiplier: [3],
   };
 
@@ -167,9 +160,9 @@ function mediaGenerator(css, numbersArr, textArr, mediaQuere) {
       count++;
     }
     completeTextArr.push([
-      `@media(max-width: ${mediaQuere.width[i]}px){`,
+      `@media(max-width: ${mediaQuere.width[i]}px){ \n`,
       ...cache,
-      "\n}",
+      "\n}\n",
     ]);
   }
 
@@ -184,4 +177,14 @@ function arrToText(arr) {
     }
   }
   return string;
+}
+
+function cssWidthSizes() {
+  const arrSizes = [];
+
+  for (let i = window.innerWidth; i >= 50; i -= 100) {
+    arrSizes.push(i);
+  }
+  console.log(arrSizes);
+  return arrSizes;
 }
