@@ -1,3 +1,3 @@
-# css-media-quere-generator
+# css-media-query-generator
 
-Media Quere generator for CSS style.
+Media Query generator for CSS style.
