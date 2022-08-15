@@ -22,21 +22,21 @@ function cssResponsivity(css) {
 
   //configurations for @media
   //Width always in decrescent order
-  const mediaQuereConfig = {
+  const mediaQueryConfig = {
     width: cssWidthSizes(),
     multiplier: [0.5],
   };
 
   //return @media(arr format)
-  const arrMediaQuere = mediaGenerator(
+  const arrMediaQuery = mediaGenerator(
     css,
     obj.numbers,
     obj.textArr,
-    mediaQuereConfig
+    mediaQueryConfig
   );
 
   //convert @media to string
-  return arrToText(arrMediaQuere);
+  return arrToText(arrMediaQuery);
 }
 
 function textToArr(text) {
@@ -137,7 +137,7 @@ function extractNumbers(arr, locations) {
   return obj;
 }
 
-function mediaGenerator(css, numbersArr, textArr, mediaQuere) {
+function mediaGenerator(css, numbersArr, textArr, mediaQuery) {
   const text = textArr;
   const locations = [];
   const completeTextArr = [];
@@ -148,9 +148,9 @@ function mediaGenerator(css, numbersArr, textArr, mediaQuere) {
     }
   }
 
-  for (let i = 0; i < mediaQuere.width.length; i++) {
+  for (let i = 0; i < mediaQuery.width.length; i++) {
     const modifiedNumbers = numbersArr.map(
-      (num) => num + Number(mediaQuere.multiplier) * i
+      (num) => num + Number(mediaQuery.multiplier) * i
     );
     let count = 0;
     const cache = text;
@@ -160,7 +160,7 @@ function mediaGenerator(css, numbersArr, textArr, mediaQuere) {
       count++;
     }
     completeTextArr.push([
-      `@media(max-width: ${mediaQuere.width[i]}px){ \n`,
+      `@media(max-width: ${mediaQuery.width[i]}px){ \n`,
       ...cache,
       "\n}\n",
     ]);
