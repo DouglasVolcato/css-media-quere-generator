@@ -9,6 +9,7 @@ body, html{
     min-height: 100%;
     background-color: black;
     color: white;
+    min-height: 100%;
 }
 header{
     text-align: center;
