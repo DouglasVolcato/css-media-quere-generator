@@ -1,3 +1,3 @@
 # css-responsivity
 
-Responsivity generator for CSS style text.
+Media Quere generator for CSS style.
