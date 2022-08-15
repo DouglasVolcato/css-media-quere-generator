@@ -30,7 +30,7 @@ function cssResponsivity(css) {
     multiplier: [3],
   };
 
-  //return css + @media in arr format
+  //return @media(arr format)
   const arrMediaQuere = mediaGenerator(
     css,
     obj.numbers,
