@@ -1,33 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/style/style.css">
-    <title>CSS Responsivity</title>
-</head>
-<body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/style/style.css" />
+    <title>CSS Media Quere</title>
+  </head>
+  <body>
     <header>
-        <h1>CSS Media Quere Generator</h1>
+      <h1>CSS Media Quere Generator</h1>
     </header>
-    
-    <main>
-        <form>
-            <label >CSS Text</label>
-            <input type="text" placeholder="Paste your CSS here" id="cssInput">
-            <button type="button" onclick="generate()">Generate</button>
-        </form>
-        
-        <br>
-        <div id="generatedCss"></div>
+    <br />
 
-        <footer>
-            <p>Made by <a href="https://github.com/DouglasVolcato" target="_blank">Douglas Volcato</a></p>
-        </footer>
+    <main>
+      <section>
+        <h2>How to use this tool:</h2>
+        <p><li>All of your CSS sizes you want to change must be in "vw" (viewport width).</li></p>
+        <p><li>In your CSS, do not use two "vw" sizes at the same line.</li></p>
+        <p><li>Before clicking the button, check if your browser screen size is at "100%" and your CSS looks like normal in your screen.</li></p>
+      </section>
+      <br /><br />
+
+      <form>
+        <label>CSS Text</label>
+        <input type="text" placeholder="Paste your CSS here" id="cssInput" />
+        <button type="button" onclick="generate()">Generate</button>
+      </form>
+
+      <br />
+      <div id="generatedCss"></div>
+
+      <footer>
+        <p>
+          Made by
+          <a href="https://github.com/DouglasVolcato" target="_blank"
+            >Douglas Volcato</a
+          >
+        </p>
+      </footer>
     </main>
 
     <script src="./assets/scripts/script.js"></script>
-</body>
+  </body>
 </html>

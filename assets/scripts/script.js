@@ -24,7 +24,7 @@ function cssResponsivity(css) {
   //Width always in decrescent order
   const mediaQuereConfig = {
     width: cssWidthSizes(),
-    multiplier: [3],
+    multiplier: [0.5],
   };
 
   //return @media(arr format)
