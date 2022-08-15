@@ -26,7 +26,7 @@ main{
 input{
     width: 30vw;
     font-size: 1vw;
-    color: black;
+    color: white;
     padding: 3px;
 }
 button{
