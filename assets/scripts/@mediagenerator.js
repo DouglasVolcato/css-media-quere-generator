@@ -143,7 +143,7 @@ function extractNumbers(arr, locations) {
   return obj;
 }
 
-//return numbers and @media
+//return @media(arr format)
 function mediaGenerator(css, numbersArr, textArr, mediaQuere) {
   const text = textArr;
   const locations = [];
