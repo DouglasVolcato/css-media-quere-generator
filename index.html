@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style/style.css">
     <title>CSS Responsivity</title>
 </head>
 <body>
@@ -12,7 +13,24 @@
         <h1>CSS Responsivity Generator</h1>
     </header>
     
-    <main></main>
+    <main>
+        <form>
+            <label >Screen width</label>
+            <input type="text" placeholder="Your screen width(ex: 1050px)" id="cssInput">
+            <br>
+            <label >CSS text</label>
+            <input type="text" placeholder="Paste your CSS here" id="cssInput">
+            <button onclick="generate()">Generate</button>
+        </form>
+        
+        <br>
+        <div id="generatedCss">generatedCss</div>
 
+        <footer>
+            <p>Made by <a href="https://github.com/DouglasVolcato" target="_blank">Douglas Volcato</a></p>
+        </footer>
+    </main>
+
+    <script src="./assets/scripts/script.js"></script>
 </body>
 </html>
