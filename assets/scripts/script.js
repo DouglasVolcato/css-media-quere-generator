@@ -24,7 +24,7 @@ function cssResponsivity(css) {
   //Width always in decrescent order
   const mediaQueryConfig = {
     width: cssWidthSizes(),
-    multiplier: [0.5],
+    multiplier: [0.4],
   };
 
   //return @media(arr format)
@@ -182,7 +182,7 @@ function arrToText(arr) {
 function cssWidthSizes() {
   const arrSizes = [];
 
-  for (let i = window.innerWidth; i >= 50; i -= 100) {
+  for (let i = window.innerWidth - 100; i >= 50; i -= 300) {
     arrSizes.push(i);
   }
   console.log(arrSizes);
