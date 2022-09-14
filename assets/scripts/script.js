@@ -1,14 +1,37 @@
+document.getElementById("reference").value = 0.5
+document.getElementById("screenSize").value = 250
+
 function generate() {
+  const reference =
+    document.getElementById("reference").value === ""
+      ? 0.5
+      : document.getElementById("reference").value;
+  const screenSize =
+    document.getElementById("screenSize").value === ""
+      ? 250
+      : document.getElementById("screenSize").value;
+
   const input = document.getElementById("cssInput").value;
-  if (input.includes("vw") && input.includes(":") && input.includes("}") && input.includes("{")) {
-    document.getElementById("generatedCss").innerText = cssResponsivity(input);
+  if (
+    input.includes("vw") &&
+    input.includes(":") &&
+    input.includes("}") &&
+    input.includes("{")
+  ) {
+    document.getElementById("generatedCss").innerText = cssResponsivity(
+      input,
+      reference,
+      screenSize
+    );
   } else {
     document.getElementById("generatedCss").innerText = "Invalid CSS";
   }
 }
 
 //mainly function
-function cssResponsivity(css) {
+function cssResponsivity(css, ref, screenSizeDecrease) {
+  const reference = ref;
+
   //convert text(string) to arr
   const arr = textToArr(css);
 
@@ -23,8 +46,8 @@ function cssResponsivity(css) {
   //configurations for @media
   //Width always in decrescent order
   const mediaQueryConfig = {
-    width: cssWidthSizes(),
-    multiplier: [0.4],
+    width: cssWidthSizes(screenSizeDecrease),
+    multiplier: [reference],
   };
 
   //return @media(arr format)
@@ -179,12 +202,11 @@ function arrToText(arr) {
   return string;
 }
 
-function cssWidthSizes() {
+function cssWidthSizes(screenSizeDecrease) {
   const arrSizes = [];
 
-  for (let i = window.innerWidth - 100; i >= 50; i -= 300) {
+  for (let i = window.innerWidth - 100; i >= 50; i -= screenSizeDecrease) {
     arrSizes.push(i);
   }
-  console.log(arrSizes);
   return arrSizes;
 }
