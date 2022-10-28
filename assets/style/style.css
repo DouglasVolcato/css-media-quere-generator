@@ -1,52 +1,63 @@
-*{
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-body, html{
+
+body,
+html {
     background-color: rgb(215, 250, 228);
     min-height: 100%;
     background-color: black;
     color: white;
     min-height: 100%;
 }
-header{
+
+header {
     text-align: center;
     top: 0;
     font-size: 1.7vw;
     width: 100%;
     background-color: black;
 }
-main{
+
+main {
     font-size: 1vw;
     margin-top: 2vw;
     margin-bottom: 2vw;
 }
-form{
+
+form {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-input{
+
+input {
     width: 30vw;
     font-size: 1vw;
     color: black;
     background-color: white;
     padding: 3px;
 }
-#reference, #screenSize{
+
+#reference,
+#screenSize {
     width: 15vw;
 }
-button{
+
+button {
     font-size: 1vw;
     font-weight: bold;
     padding: 3px;
 }
-button:hover{
+
+button:hover {
     background-color: rgb(0, 255, 195);
 }
-footer{
+
+footer {
     font-weight: bold;
     text-align: center;
     font-size: 1.3vw;
@@ -55,21 +66,386 @@ footer{
     background-color: black;
 }
 
-@media(max-width: 1139px){
-    *{ box-sizing: border-box; padding: 0; margin: 0; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; } body, html{ background-color: rgb(215, 250, 228); min-height: 100%; background-color: black; color: white; min-height: 100%; } header{ text-align: center; top: 0; font-size: 1.7vw; width: 100%; background-color: black; } main{ font-size: 1vw; margin-top: 2vw; margin-bottom: 2vw; } input{ width: 30vw; font-size: 1vw; color: black; background-color: white; padding: 3px; } #reference, #screenSize{ width: 15vw; } button{ font-size: 1vw; font-weight: bold; padding: 3px; } button:hover{ background-color: rgb(0, 255, 195); } footer{ font-weight: bold; text-align: center; font-size: 1.3vw; bottom: 0; width: 100%; background-color: black; }
+@media(max-width: 1139px) {
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     }
-    @media(max-width: 939px){
-    *{ box-sizing: border-box; padding: 0; margin: 0; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; } body, html{ background-color: rgb(215, 250, 228); min-height: 100%; background-color: black; color: white; min-height: 100%; } header{ text-align: center; top: 0; font-size: 2.2vw; width: 100%; background-color: black; } main{ font-size: 1.5vw; margin-top: 2.5vw; margin-bottom: 2.5vw; } input{ width: 30.5vw; font-size: 1.5vw; color: black; background-color: white; padding: 3px; } #reference, #screenSize{ width: 15.5vw; } button{ font-size: 1.5vw; font-weight: bold; padding: 3px; } button:hover{ background-color: rgb(0, 255, 195); } footer{ font-weight: bold; text-align: center; font-size: 1.8vw; bottom: 0; width: 100%; background-color: black; }
+
+    body,
+    html {
+        background-color: rgb(215, 250, 228);
+        min-height: 100%;
+        background-color: black;
+        color: white;
+        min-height: 100%;
     }
-    @media(max-width: 739px){
-    *{ box-sizing: border-box; padding: 0; margin: 0; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; } body, html{ background-color: rgb(215, 250, 228); min-height: 100%; background-color: black; color: white; min-height: 100%; } header{ text-align: center; top: 0; font-size: 2.7vw; width: 100%; background-color: black; } main{ font-size: 2vw; margin-top: 3vw; margin-bottom: 3vw; } input{ width: 31vw; font-size: 2vw; color: black; background-color: white; padding: 3px; } #reference, #screenSize{ width: 16vw; } button{ font-size: 2vw; font-weight: bold; padding: 3px; } button:hover{ background-color: rgb(0, 255, 195); } footer{ font-weight: bold; text-align: center; font-size: 2.3vw; bottom: 0; width: 100%; background-color: black; }
+
+    header {
+        text-align: center;
+        top: 0;
+        font-size: 1.7vw;
+        width: 100%;
+        background-color: black;
     }
-    @media(max-width: 539px){
-    *{ box-sizing: border-box; padding: 0; margin: 0; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; } body, html{ background-color: rgb(215, 250, 228); min-height: 100%; background-color: black; color: white; min-height: 100%; } header{ text-align: center; top: 0; font-size: 3.2vw; width: 100%; background-color: black; } main{ font-size: 2.5vw; margin-top: 3.5vw; margin-bottom: 3.5vw; } input{ width: 31.5vw; font-size: 2.5vw; color: black; background-color: white; padding: 3px; } #reference, #screenSize{ width: 16.5vw; } button{ font-size: 2.5vw; font-weight: bold; padding: 3px; } button:hover{ background-color: rgb(0, 255, 195); } footer{ font-weight: bold; text-align: center; font-size: 2.8vw; bottom: 0; width: 100%; background-color: black; }
+
+    main {
+        font-size: 1vw;
+        margin-top: 2vw;
+        margin-bottom: 2vw;
     }
-    @media(max-width: 339px){
-    *{ box-sizing: border-box; padding: 0; margin: 0; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; } body, html{ background-color: rgb(215, 250, 228); min-height: 100%; background-color: black; color: white; min-height: 100%; } header{ text-align: center; top: 0; font-size: 3.7vw; width: 100%; background-color: black; } main{ font-size: 3vw; margin-top: 4vw; margin-bottom: 4vw; } input{ width: 32vw; font-size: 3vw; color: black; background-color: white; padding: 3px; } #reference, #screenSize{ width: 17vw; } button{ font-size: 3vw; font-weight: bold; padding: 3px; } button:hover{ background-color: rgb(0, 255, 195); } footer{ font-weight: bold; text-align: center; font-size: 3.3vw; bottom: 0; width: 100%; background-color: black; }
+
+    input {
+        width: 30vw;
+        font-size: 1vw;
+        color: black;
+        background-color: white;
+        padding: 3px;
     }
-    @media(max-width: 139px){
-    *{ box-sizing: border-box; padding: 0; margin: 0; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; } body, html{ background-color: rgb(215, 250, 228); min-height: 100%; background-color: black; color: white; min-height: 100%; } header{ text-align: center; top: 0; font-size: 4.2vw; width: 100%; background-color: black; } main{ font-size: 3.5vw; margin-top: 4.5vw; margin-bottom: 4.5vw; } input{ width: 32.5vw; font-size: 3.5vw; color: black; background-color: white; padding: 3px; } #reference, #screenSize{ width: 17.5vw; } button{ font-size: 3.5vw; font-weight: bold; padding: 3px; } button:hover{ background-color: rgb(0, 255, 195); } footer{ font-weight: bold; text-align: center; font-size: 3.8vw; bottom: 0; width: 100%; background-color: black; }
+
+    #reference,
+    #screenSize {
+        width: 15vw;
     }
+
+    button {
+        font-size: 1vw;
+        font-weight: bold;
+        padding: 3px;
+    }
+
+    button:hover {
+        background-color: rgb(0, 255, 195);
+    }
+
+    footer {
+        font-weight: bold;
+        text-align: center;
+        font-size: 1.3vw;
+        bottom: 0;
+        width: 100%;
+        background-color: black;
+    }
+}
+
+@media(max-width: 939px) {
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    body,
+    html {
+        background-color: rgb(215, 250, 228);
+        min-height: 100%;
+        background-color: black;
+        color: white;
+        min-height: 100%;
+    }
+
+    header {
+        text-align: center;
+        top: 0;
+        font-size: 2.2vw;
+        width: 100%;
+        background-color: black;
+    }
+
+    main {
+        font-size: 1.5vw;
+        margin-top: 2.5vw;
+        margin-bottom: 2.5vw;
+    }
+
+    input {
+        width: 30.5vw;
+        font-size: 1.5vw;
+        color: black;
+        background-color: white;
+        padding: 3px;
+    }
+
+    #reference,
+    #screenSize {
+        width: 15.5vw;
+    }
+
+    button {
+        font-size: 1.5vw;
+        font-weight: bold;
+        padding: 3px;
+    }
+
+    button:hover {
+        background-color: rgb(0, 255, 195);
+    }
+
+    footer {
+        font-weight: bold;
+        text-align: center;
+        font-size: 1.8vw;
+        bottom: 0;
+        width: 100%;
+        background-color: black;
+    }
+}
+
+@media(max-width: 739px) {
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    body,
+    html {
+        background-color: rgb(215, 250, 228);
+        min-height: 100%;
+        background-color: black;
+        color: white;
+        min-height: 100%;
+    }
+
+    header {
+        text-align: center;
+        top: 0;
+        font-size: 2.7vw;
+        width: 100%;
+        background-color: black;
+    }
+
+    main {
+        font-size: 2vw;
+        margin-top: 3vw;
+        margin-bottom: 3vw;
+    }
+
+    input {
+        width: 31vw;
+        font-size: 2vw;
+        color: black;
+        background-color: white;
+        padding: 3px;
+    }
+
+    #reference,
+    #screenSize {
+        width: 16vw;
+    }
+
+    button {
+        font-size: 2vw;
+        font-weight: bold;
+        padding: 3px;
+    }
+
+    button:hover {
+        background-color: rgb(0, 255, 195);
+    }
+
+    footer {
+        font-weight: bold;
+        text-align: center;
+        font-size: 2.3vw;
+        bottom: 0;
+        width: 100%;
+        background-color: black;
+    }
+}
+
+@media(max-width: 539px) {
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    body,
+    html {
+        background-color: rgb(215, 250, 228);
+        min-height: 100%;
+        background-color: black;
+        color: white;
+        min-height: 100%;
+    }
+
+    header {
+        text-align: center;
+        top: 0;
+        font-size: 3.2vw;
+        width: 100%;
+        background-color: black;
+    }
+
+    main {
+        font-size: 2.5vw;
+        margin-top: 3.5vw;
+        margin-bottom: 3.5vw;
+    }
+
+    input {
+        width: 31.5vw;
+        font-size: 2.5vw;
+        color: black;
+        background-color: white;
+        padding: 3px;
+    }
+
+    #reference,
+    #screenSize {
+        width: 16.5vw;
+    }
+
+    button {
+        font-size: 2.5vw;
+        font-weight: bold;
+        padding: 3px;
+    }
+
+    button:hover {
+        background-color: rgb(0, 255, 195);
+    }
+
+    footer {
+        font-weight: bold;
+        text-align: center;
+        font-size: 2.8vw;
+        bottom: 0;
+        width: 100%;
+        background-color: black;
+    }
+}
+
+@media(max-width: 339px) {
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    body,
+    html {
+        background-color: rgb(215, 250, 228);
+        min-height: 100%;
+        background-color: black;
+        color: white;
+        min-height: 100%;
+    }
+
+    header {
+        text-align: center;
+        top: 0;
+        font-size: 3.7vw;
+        width: 100%;
+        background-color: black;
+    }
+
+    main {
+        font-size: 3vw;
+        margin-top: 4vw;
+        margin-bottom: 4vw;
+    }
+
+    input {
+        width: 32vw;
+        font-size: 3vw;
+        color: black;
+        background-color: white;
+        padding: 3px;
+    }
+
+    #reference,
+    #screenSize {
+        width: 17vw;
+    }
+
+    button {
+        font-size: 3vw;
+        font-weight: bold;
+        padding: 3px;
+    }
+
+    button:hover {
+        background-color: rgb(0, 255, 195);
+    }
+
+    footer {
+        font-weight: bold;
+        text-align: center;
+        font-size: 3.3vw;
+        bottom: 0;
+        width: 100%;
+        background-color: black;
+    }
+}
+
+@media(max-width: 139px) {
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    body,
+    html {
+        background-color: rgb(215, 250, 228);
+        min-height: 100%;
+        background-color: black;
+        color: white;
+        min-height: 100%;
+    }
+
+    header {
+        text-align: center;
+        top: 0;
+        font-size: 4.2vw;
+        width: 100%;
+        background-color: black;
+    }
+
+    main {
+        font-size: 3.5vw;
+        margin-top: 4.5vw;
+        margin-bottom: 4.5vw;
+    }
+
+    input {
+        width: 32.5vw;
+        font-size: 3.5vw;
+        color: black;
+        background-color: white;
+        padding: 3px;
+    }
+
+    #reference,
+    #screenSize {
+        width: 17.5vw;
+    }
+
+    button {
+        font-size: 3.5vw;
+        font-weight: bold;
+        padding: 3px;
+    }
+
+    button:hover {
+        background-color: rgb(0, 255, 195);
+    }
+
+    footer {
+        font-weight: bold;
+        text-align: center;
+        font-size: 3.8vw;
+        bottom: 0;
+        width: 100%;
+        background-color: black;
+    }
+}
