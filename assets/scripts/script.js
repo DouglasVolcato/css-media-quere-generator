@@ -1,5 +1,5 @@
-document.getElementById("reference").value = 0.5
-document.getElementById("screenSize").value = 250
+document.getElementById("reference").value = 0.5;
+document.getElementById("screenSize").value = 250;
 
 function generate() {
   const reference =
@@ -59,7 +59,10 @@ function cssResponsivity(css, ref, screenSizeDecrease) {
   );
 
   //convert @media to string
-  return arrToText(arrMediaQuery);
+  const text = arrToText(arrMediaQuery);
+
+  // remove useless lines
+  return removeUnusedLines(text);
 }
 
 function textToArr(text) {
@@ -209,4 +212,20 @@ function cssWidthSizes(screenSizeDecrease) {
     arrSizes.push(i);
   }
   return arrSizes;
+}
+
+function removeUnusedLines(text) {
+  const arr = text.split(";");
+  const modifiedArr = [];
+  arr.map((item) => {
+    if (
+      item.includes("vw") ||
+      item.includes("*") ||
+      item.includes("{") ||
+      item.includes("}")
+    ) {
+      modifiedArr.push(item);
+    }
+  });
+  return modifiedArr.join(";");
 }
